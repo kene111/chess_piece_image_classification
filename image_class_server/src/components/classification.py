@@ -1,4 +1,5 @@
 import torch
+import torch.nn.functional as F
 from ..config.sys_config import ImageClassConfig
 
 class ImageClassify:
@@ -12,6 +13,9 @@ class ImageClassify:
         img = img.to(ImageClassConfig.system_device)
         img.unsqueeze(0)
         outputs = self.model(img.unsqueeze(0))
-        _, predicted = torch.max(outputs, 1)
+        outputs = F.softmax(outputs, dim=1)
+        conf, predicted = torch.max(outputs, 1)
         target = self.classes[predicted.item()]
-        return target
+        conf = conf.item()
+        conf = f"{conf:.2f}"
+        return str(target), conf
