@@ -14,7 +14,7 @@ class ImageClassConfig:
     image_targets = ['Bishop', 'King', 'Knight', 'Pawn', 'Queen', 'Rook']
 
 
-    model_name = "best_model_epoch_11--val_acc_0.48.pth"
+    model_name = "best_model_epoch_22--val_acc_0.52.pth"
     model_dir = "models"
     model_path = os.path.join(model_dir, model_name)
     alive = {"system_response":"System is running!"}
