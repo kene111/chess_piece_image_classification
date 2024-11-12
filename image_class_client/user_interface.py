@@ -16,7 +16,7 @@ uploaded_image = st.file_uploader('Kindly upload any photo of a chess piece.', t
 url_api = "http://127.0.0.1:5000/classify"
 
 def load_image(filename):
-   """Load model from filename (path)"""
+    """Load model from filename (path)"""
     im = Image.open(filename).convert('RGB')
     im_np = np.array(im)
     im_np = Image.fromarray(im_np)
