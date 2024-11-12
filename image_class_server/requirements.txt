@@ -1,0 +1,9 @@
+Flask==2.3.2
+Flask-Cors==4.0.0
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==2.0.1+cpu
+torchmetrics==1.1.1
+torchvision==0.15.2+cpu
+Pillow==10.0.0
+python-dotenv==1.0.0
+Werkzeug==3.0.1
