@@ -3,13 +3,13 @@ import torch.nn.functional as F
 from ..config.sys_config import ImageClassConfig
 
 class ImageClassify:
-    
+    """Image classifier object"""
     def __init__(self):
         self.model = ImageClassConfig.classification_model
         self.classes = ImageClassConfig.image_targets
 
     def classify(self, img):
-        print(img.shape)
+        """classify tensor image"""
         img = img.to(ImageClassConfig.system_device)
         img.unsqueeze(0)
         outputs = self.model(img.unsqueeze(0))

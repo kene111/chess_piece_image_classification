@@ -7,6 +7,7 @@ import torch
 load_dotenv()
 
 class ImageClassConfig:
+    """ IMAGE CLASSIFICATION CONFIGURATION OBJECT"""
 
     object_storage = "storage"
 
