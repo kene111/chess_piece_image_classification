@@ -39,11 +39,12 @@ Image Classification Project.
 ### How to run the System locally:
 ### Without Docker Compose
 1. Create and activate a two different virtual environment for the client and server system on different terminals: ```python3 -m venv _name_of_virtual_env_```.
-2. Install dependencies using: ```pip install -r requirements.txt```.
+2. In the ```image_class_server``` directory create a ```models``` folder and download the fine-tuned model into ```models``` directory.
+3. Install dependencies using: ```pip install -r requirements.txt```.
   
-3. Run the server locally using: ```python app.py```.
-4. Run the client locally using: ```streamlit run user_interface.py```.
-5. Once Successful a screen should appear with an easy to user UI.
+4. Run the server locally using: ```python app.py```.
+5. Run the client locally using: ```streamlit run user_interface.py```.
+6. Once Successful a screen should appear with an easy to user UI.
 
 ### With Docker Compose:
 1. Change directory to root folder.
