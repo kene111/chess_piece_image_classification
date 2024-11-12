@@ -24,6 +24,6 @@ def classify_image():
     ic = ImageClassify()
     img_str = request.get_json()['img_b64']
     tensor_image = get_tensor_image(img_str)
-    target = ic.classify(tensor_image)
-    response = {"system_response": target}
+    target, conf = ic.classify(tensor_image)
+    response = {"system_response": {"target":target, "confidence": conf}}
     return Response(response=json.dumps(response), status=200, mimetype='application/json')
